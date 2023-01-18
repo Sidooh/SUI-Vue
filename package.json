@@ -1,6 +1,6 @@
 {
   "name": "@nabcellent/sui-vue",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Sidooh's Vue component library",
   "license": "MIT",
   "type": "module",
