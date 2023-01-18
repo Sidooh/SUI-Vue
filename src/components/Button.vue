@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{ id?: number | string }>()
+const props = defineProps<{ id?: string }>()
 </script>
 
 <style scoped>
