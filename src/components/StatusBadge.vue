@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { Status } from "@/utils/enums";
+import { Status } from "../utils";
 import {
     faCalendarXmark,
     faCheck,

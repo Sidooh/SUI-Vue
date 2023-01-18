@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import { Telco } from "@/utils/enums";
-import { getTelcoFromPhone } from "@/utils/helpers";
+import { Telco } from "../utils";
+import { getTelcoFromPhone } from "../utils";
 
 const props = defineProps<{ phone?: string | number }>();
 const telco = getTelcoFromPhone(String(props.phone));
