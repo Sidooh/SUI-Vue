@@ -149,8 +149,8 @@ import { ref } from 'vue'
 import IntermediateCheckbox from './IntermediateCheckbox.vue'
 import DebouncedInput from './DebouncedInput.vue'
 import { rankItem } from "@tanstack/match-sorter-utils";
-import Filter from "@/components/datatable/Filter.vue";
-import Tooltip from "@/components/Tooltip.vue";
+import Filter from "./Filter.vue";
+import Tooltip from "../Tooltip.vue";
 
 const setPageSize = (e: any) => table.setPageSize(Number((e.target as HTMLSelectElement)?.value))
 

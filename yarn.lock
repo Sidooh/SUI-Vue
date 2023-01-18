@@ -2144,11 +2144,15 @@ __metadata:
     "@vitejs/plugin-vue": ^4.0.0
     babel-loader: ^8.3.0
     moment: ^2.29.4
+    simplebar: ^6.1.0
+    simplebar-vue: ^2.1.0
     typescript: ^4.6.4
     vite: ^4.0.4
     vue: ^3.2.45
     vue-loader: ^16.8.3
     vue-tsc: ^1.0.9
+  peerDependencies:
+    vue: ^3.2.25
   languageName: unknown
   linkType: soft
 
@@ -5593,6 +5597,13 @@ __metadata:
   version: 6.3.0
   resolution: "camelcase@npm:6.3.0"
   checksum: 8c96818a9076434998511251dcb2761a94817ea17dbdc37f47ac080bd088fc62c7369429a19e2178b993497132c8cbcf5cc1f44ba963e76782ba469c0474938d
+  languageName: node
+  linkType: hard
+
+"can-use-dom@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "can-use-dom@npm:0.1.0"
+  checksum: 488fc94c40f2fcce46ebd41abf17ef0449acf0d6b145116036cd592a8e977e5729918d4b3b7c642ce7b1f5b83d330ade39a172cf6b6ef91093785991a868b308
   languageName: node
   linkType: hard
 
@@ -12970,6 +12981,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"simplebar-core@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "simplebar-core@npm:1.1.0"
+  dependencies:
+    can-use-dom: ^0.1.0
+    lodash: ^4.17.21
+  checksum: 2e44865c15c4100cbc7622ea0617ef6119970a63814a815bed44ab2f21cb33f875329fdfc053006c19369ba2cfeed42b4b003da7be049613bd008cdbf0460de9
+  languageName: node
+  linkType: hard
+
+"simplebar-vue@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "simplebar-vue@npm:2.1.0"
+  dependencies:
+    core-js: ^3.6.5
+    simplebar-core: ^1.1.0
+    vue-demi: ^0.13.11
+  peerDependencies:
+    vue: ^2.5.17
+  checksum: c36e03fc18b05484df92ee703b6f3f4146bf631d170d4963e9a68d46c1beffafa4626dacd4bde711d15c3ce8c66b6458f2569b7f2276883494fc9928a5ef9732
+  languageName: node
+  linkType: hard
+
+"simplebar@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "simplebar@npm:6.1.0"
+  dependencies:
+    can-use-dom: ^0.1.0
+    simplebar-core: ^1.1.0
+  checksum: b12242436c3fe02fb55a8f5675453d8618d8d1951f2f132bd4c7587e7a959e34ca41c9786ca07e400d9b7de69b404e970eb50af916775525bb9a741689f1762f
+  languageName: node
+  linkType: hard
+
 "sisteransi@npm:^1.0.5":
   version: 1.0.5
   resolution: "sisteransi@npm:1.0.5"
@@ -14464,6 +14508,22 @@ __metadata:
   version: 3.1.0
   resolution: "void-elements@npm:3.1.0"
   checksum: 0390f818107fa8fce55bb0a5c3f661056001c1d5a2a48c28d582d4d847347c2ab5b7f8272314cac58acf62345126b6b09bea623a185935f6b1c3bbce0dfd7f7f
+  languageName: node
+  linkType: hard
+
+"vue-demi@npm:^0.13.11":
+  version: 0.13.11
+  resolution: "vue-demi@npm:0.13.11"
+  peerDependencies:
+    "@vue/composition-api": ^1.0.0-rc.1
+    vue: ^3.0.0-0 || ^2.6.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+  bin:
+    vue-demi-fix: bin/vue-demi-fix.js
+    vue-demi-switch: bin/vue-demi-switch.js
+  checksum: 0fbe9bf8ab7fe498ffa2bbd0cfc8f6f43a6bbaa5eda3e20ef1b70dca7c8b0ddb216a7ff2f632b694fe0735805638975abb441c621ec0bd2e6d4656353f316c15
   languageName: node
   linkType: hard
 

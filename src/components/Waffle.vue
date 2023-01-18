@@ -17,7 +17,7 @@
         <div class="dropdown-menu dropdown-menu-end dropdown-menu-card dropdown-caret-bg"
              aria-labelledby="navbarDropdownMenu">
             <div class="card shadow-none">
-                <div data-simplebar data-simplebar-auto-hide="false" class="nine-dots-dropdown">
+                <simplebar data-simplebar data-simplebar-auto-hide="false" class="nine-dots-dropdown">
                     <div class="card-body px-3">
                         <div class="row text-center g-0">
                             <div v-for="(link, i) in links" :key="`link-${i}`" class="col-4">
@@ -39,14 +39,15 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </simplebar>
             </div>
         </div>
     </li>
 </template>
 
 <script setup lang="ts">
-import 'simplebar/dist/simplebar.css';
+import simplebar from 'simplebar-vue';
+import 'simplebar/dist/simplebar.min.css';
 
 type WaffleLink = {
     avatar?: string
