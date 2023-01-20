@@ -1,6 +1,32 @@
 import { Telco } from "./enums";
 import Swal, { SweetAlertOptions } from 'sweetalert2';
 
+export const JWT = {
+    decode: (token: string) => {
+        let base64Url = token.split('.')[1];
+        let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        let jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+
+        return JSON.parse(jsonPayload);
+    },
+};
+
+export const groupBy = (array: any[], property: string) => {
+    let hash: any = {}, props = property.split('.');
+
+    for (let i = 0; i < array.length; i++) {
+        let key = props.reduce((acc, prop) => acc && acc[prop], array[i]);
+
+        if (!hash[key]) hash[key] = [];
+
+        hash[key].push(array[i]);
+    }
+
+    return hash;
+}
+
 export const getTelcoFromPhone = (phone: string | number) => {
     phone = String(phone);
 
