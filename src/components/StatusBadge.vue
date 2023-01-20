@@ -9,8 +9,8 @@ import { Status } from "../utils";
 import {
     faCalendarXmark,
     faCheck,
-    faCircleExclamation,
-    faHourglassStart,
+    faCircleExclamation, faCircleInfo,
+    faHourglassStart, faSkullCrossbones,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -26,12 +26,18 @@ const statusProps = (status: Status) => {
     } else if (status === Status.PENDING) {
         color = 'warning';
         icon = faHourglassStart;
+    } else if (status === Status.REFUNDED) {
+        color = 'info';
+        icon = faCircleInfo;
     } else if ([Status.FAILED, Status.INACTIVE, Status.DECLINED].includes(status)) {
         color = 'danger';
         icon = faCircleExclamation;
     } else if ([Status.EXPIRED].includes(status)) {
         color = 'secondary';
         icon = faCalendarXmark;
+    } else {
+        color = 'light'
+        icon = faSkullCrossbones
     }
 
     return { color, icon };

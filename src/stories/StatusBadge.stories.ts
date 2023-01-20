@@ -8,7 +8,7 @@ export default {
     component: StatusBadgeComponent,
     argTypes: {
         status: {
-            options: Object.values(Status),
+            options: [...Object.values(Status), 'UNDEFINED'],
         }
     },
 } as Meta<typeof StatusBadgeComponent>;
