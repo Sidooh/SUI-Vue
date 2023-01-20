@@ -15,7 +15,7 @@ export default defineConfig({
         },
         rollupOptions: {
             // external modules won't be bundled into your library
-            external: [/*/\.(css|scss)$/, */'vue'],
+            external: ['vue'],
             output: {
                 // disable warning on src/index.ts using both default and named export
                 exports: 'named',

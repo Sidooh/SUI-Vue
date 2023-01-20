@@ -1,4 +1,5 @@
 export { default as Badge } from './Badge.vue'
+export { default as CardBgCorner } from './CardBgCorner.vue'
 export { default as DataTable } from './datatable/DataTable.vue'
 export { default as Logo } from './Logo.vue'
 export { default as PhoneNumber } from './Phone.vue'
