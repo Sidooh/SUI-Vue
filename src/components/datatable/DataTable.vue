@@ -38,10 +38,9 @@
                                       :on-change="table.getToggleAllRowsSelectedHandler()"/>
             </th>
             <th class="fw-bolder" v-for="header in headerGroup.headers" :key="header.id" :colSpan="header.colSpan"
-                :class="header.column.getCanSort() ? 'cursor-pointer select-none' : ''"
-                @click="header.column.getToggleSortingHandler()?.($event)">
+                :class="header.column.getCanSort() ? 'cursor-pointer select-none' : ''">
                 <template v-if="!header.isPlaceholder">
-                    <div>
+                    <div @click="header.column.getToggleSortingHandler()?.($event)">
                         <FlexRender v-if="!header.isPlaceholder" :render="header.column.columnDef.header"
                                     :props="header.getContext()"/>
                         <font-awesome-icon v-show="header.column.getIsSorted() === 'asc'" className="ms-2"

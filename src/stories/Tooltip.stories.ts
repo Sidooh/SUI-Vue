@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/vue3';
 import '../assets/css/theme.min.css';
 import '../assets/css/user.min.css';
-import Tooltip from "../components/Tooltip.vue";
+import TooltipComponent from "../components/Tooltip.vue";
 import Button from "../components/Button.vue";
 
 export default {
@@ -9,22 +9,22 @@ export default {
      * See https://storybook.js.org/docs/vue/configure/overview#configure-story-loading
      * to learn how to generate automatic titles
      */
-    component: Tooltip,
+    component: TooltipComponent,
     argTypes: {
         placement: {
             options: ['top', 'right', 'bottom', 'left'],
         }
     },
-} as Meta<typeof Tooltip>;
+} as Meta<typeof TooltipComponent>;
 
-export const Default: StoryFn<typeof Tooltip> = (args) => ({
-    components: { Tooltip, Button },
+export const Tooltip: StoryFn<typeof TooltipComponent> = (args) => ({
+    components: { TooltipComponent, Button },
     setup() {
         return { args };
     },
     template: `
-        <Tooltip title="Tooltip" class="m-5" v-bind="args">
+        <TooltipComponent title="TooltipComponent" class="m-5" v-bind="args">
         <Button class="me-1">Tooltip</Button>
-        </Tooltip>
+        </TooltipComponent>
     `,
 });

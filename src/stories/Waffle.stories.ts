@@ -1,18 +1,18 @@
 import { Meta, StoryFn } from '@storybook/vue3';
-import Waffle from "../components/Waffle.vue";
+import WaffleComponent from "../components/Waffle.vue";
 import '../assets/css/theme.min.css';
 import '../assets/css/user.min.css';
 import 'simplebar/dist/simplebar.css';
 import 'bootstrap/dist/js/bootstrap.min.js'
 
 export default {
-    component: Waffle,
-} as Meta<typeof Waffle>;
+    component: WaffleComponent,
+} as Meta<typeof WaffleComponent>;
 
-export const Default: StoryFn<typeof Waffle> = () => ({
-    components: { Waffle },
+export const Waffle: StoryFn<typeof WaffleComponent> = () => ({
+    components: { WaffleComponent },
     template: `
-        <Waffle class="m-5" :links="[
+        <WaffleComponent class="m-5" :links="[
     {
         avatarText: 'E',
         title: 'Enterprise',

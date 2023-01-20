@@ -1851,6 +1851,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@faker-js/faker@npm:^7.6.0":
+  version: 7.6.0
+  resolution: "@faker-js/faker@npm:7.6.0"
+  checksum: 942af6221774e8c98a0eb6bc75265e05fb81a941170377666c3439aab9495dd321d6beedc5406f07e6ad44262b3e43c20961f666d116ad150b78e7437dd1bb2b
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-common-types@npm:6.2.1":
   version: 6.2.1
   resolution: "@fortawesome/fontawesome-common-types@npm:6.2.1"
@@ -1885,13 +1892,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/vue-fontawesome@npm:^2.0.9":
-  version: 2.0.9
-  resolution: "@fortawesome/vue-fontawesome@npm:2.0.9"
+"@fortawesome/vue-fontawesome@npm:latest-3":
+  version: 3.0.2
+  resolution: "@fortawesome/vue-fontawesome@npm:3.0.2"
   peerDependencies:
     "@fortawesome/fontawesome-svg-core": ~1 || ~6
-    vue: ~2
-  checksum: 18c35058ebc76472073d225565ce36d1bc80e818b9d586e47eb20cbdcc8cab1bcc80a118e6052f6d7528ae5d23918a4ec9e537db71c5de0255f0cd67db780b37
+    vue: ">= 3.0.0 < 4"
+  checksum: a67aff78d994d73dcd110b8554af0aefb516410be2c22ea09f665592f56af3c7e715291ff6d50993e507facd3a7c2c5808ba8ca08472101b6b3fb0f71254c232
   languageName: node
   linkType: hard
 
@@ -2125,10 +2132,11 @@ __metadata:
   resolution: "@nabcellent/sui-vue@workspace:."
   dependencies:
     "@babel/core": ^7.20.12
+    "@faker-js/faker": ^7.6.0
     "@fortawesome/fontawesome-svg-core": ^6.2.1
     "@fortawesome/free-regular-svg-icons": ^6.2.1
     "@fortawesome/free-solid-svg-icons": ^6.2.1
-    "@fortawesome/vue-fontawesome": ^2.0.9
+    "@fortawesome/vue-fontawesome": latest-3
     "@mdx-js/react": ^1.6.22
     "@storybook/addon-actions": ^6.5.15
     "@storybook/addon-docs": ^6.5.15

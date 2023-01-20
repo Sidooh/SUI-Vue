@@ -11,11 +11,10 @@ import {
     faCheck,
     faCircleExclamation,
     faHourglassStart,
-    IconDefinition
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-const props = defineProps<{ icon?: IconDefinition, status: Status }>(),
+const props = defineProps<{ status: Status }>(),
     status = props.status?.toUpperCase() as Status
 
 const statusProps = (status: Status) => {
@@ -40,7 +39,3 @@ const statusProps = (status: Status) => {
 
 const { color, icon } = statusProps(status);
 </script>
-
-<style scoped>
-
-</style>
