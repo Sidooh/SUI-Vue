@@ -33,7 +33,6 @@ import DebouncedInput from "./DebouncedInput.vue";
 const props = defineProps<{ column: Column<any>, table: Table<any> }>()
 
 const firstValue = ref(props.table.getPreFilteredRowModel().flatRows[0]?.getValue(props.column.id))
-console.log(firstValue.value)
 const columnFilterValue = ref((props.column.getFilterValue() ?? '') as [number, number]);
 
 const sortedUniqueValues = typeof firstValue.value === 'number' ? [] : Array.from(props.column.getFacetedUniqueValues().keys()).sort();

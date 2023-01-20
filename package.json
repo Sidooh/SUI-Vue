@@ -19,7 +19,7 @@
     ".": {
       "import": "./dist/sui-vue.es.js"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./dist/style.min.css": "./dist/style.min.css"
   },
   "scripts": {
     "dev": "vite",
