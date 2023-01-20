@@ -61,6 +61,7 @@
     "moment": "^2.29.4",
     "simplebar": "^6.1.0",
     "simplebar-vue": "^2.1.0",
+    "sweetalert2": "^11.7.0",
     "typescript": "^4.6.4",
     "vite": "^4.0.4",
     "vue": "^3.2.45",

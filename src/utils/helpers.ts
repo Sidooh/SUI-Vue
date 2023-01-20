@@ -1,4 +1,5 @@
 import { Telco } from "./enums";
+import Swal, { SweetAlertOptions } from 'sweetalert2';
 
 export const getTelcoFromPhone = (phone: string | number) => {
     phone = String(phone);
@@ -22,4 +23,18 @@ export const getTelcoFromPhone = (phone: string | number) => {
     } else {
         return null;
     }
+};
+
+export const toast = async (data: SweetAlertOptions) => {
+    const options = {
+        ...data,
+        icon: data.icon ?? 'success',
+        timer: (data.timer ?? 7) * 1000, // 7 secs,
+        position: data.position ?? 'bottom-right',
+        toast: data.toast ?? true,
+        title: data.title,
+        showConfirmButton: data.showConfirmButton ?? false,
+    };
+
+    await Swal.fire(options);
 };

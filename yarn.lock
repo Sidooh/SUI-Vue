@@ -2156,6 +2156,7 @@ __metadata:
     moment: ^2.29.4
     simplebar: ^6.1.0
     simplebar-vue: ^2.1.0
+    sweetalert2: ^11.7.0
     typescript: ^4.6.4
     vite: ^4.0.4
     vue: ^3.2.45
@@ -13597,6 +13598,13 @@ __metadata:
     espree: 9.2.0
     htmlparser2-svelte: 4.1.0
   checksum: c0260161c80d1c5ec52808e98f82def379746020c4ffad6e462fec3cd299a3435430eb55a8fe4265884975575bd2aa74f9eda11617864e8aa5a4ca585b57dc51
+  languageName: node
+  linkType: hard
+
+"sweetalert2@npm:^11.7.0":
+  version: 11.7.0
+  resolution: "sweetalert2@npm:11.7.0"
+  checksum: 5c6b441290913d8c77f65c8039022386753df9efe77e52a71e2175be94cb89cb45fb2d6565ecf833198512e2970d8951ed3e3c176924d7404b0fa93ad1e0275e
   languageName: node
   linkType: hard
 
