@@ -5,13 +5,13 @@
                             :min="Number(column.getFacetedMinMaxValues()?.[0] ?? '')"
                             :max="Number(column.getFacetedMinMaxValues()?.[1] ?? '')"
                             :on-change="value => column.setFilterValue((old: [number, number]) => [value, old?.[1]])"
-                            :query="columnFilterValue?.[0]??''"
+                            :query="String(columnFilterValue?.[0] ?? '')"
                             :placeholder="`Min ${column.getFacetedMinMaxValues()?.[0] ? `(${column.getFacetedMinMaxValues()?.[0]})` : ''}`"/>
             <DebouncedInput type="number" class="w-25 border rounded"
                             :min="Number(column.getFacetedMinMaxValues()?.[0] ?? '')"
                             :max="Number(column.getFacetedMinMaxValues()?.[1] ?? '')"
-                            :on-change="value => column.setFilterValue((old: [number, number]) => [value, old?.[1]])"
-                            :query="columnFilterValue?.[0]??''"
+                            :on-change="value => column.setFilterValue((old: [number, number]) => [old?.[0], value])"
+                            :query="String(columnFilterValue?.[0] ?? '')"
                             :placeholder="`Max ${column.getFacetedMinMaxValues()?.[1] ? `(${column.getFacetedMinMaxValues()?.[1]})` : ''}`"/>
         </div>
     </div>
@@ -34,7 +34,7 @@ const props = defineProps<{ column: Column<any>, table: Table<any> }>()
 
 const firstValue = ref(props.table.getPreFilteredRowModel().flatRows[0]?.getValue(props.column.id))
 console.log(firstValue.value)
-const columnFilterValue = ref(props.column.getFilterValue() ?? '');
+const columnFilterValue = ref((props.column.getFilterValue() ?? '') as [number, number]);
 
 const sortedUniqueValues = typeof firstValue.value === 'number' ? [] : Array.from(props.column.getFacetedUniqueValues().keys()).sort();
 </script>
