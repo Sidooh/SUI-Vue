@@ -15,9 +15,9 @@ export const DataTable: StoryFn<typeof DataTableComponent> = () => {
     const data = Array.from({ length: 25 }, (a) => ({
         name: faker.name.firstName(),
         age: faker.datatype.number(70),
-        status: faker.helpers.arrayElement([...Object.values(Status), 'UNDEFINED'])
+        status: faker.helpers.arrayElement([...Object.values(Status), undefined])
     }));
-    data.unshift({ name: 'SIDOOH', age: 21, status: 'UNDEFINED' });
+    data.unshift({ name: 'SIDOOH', age: 21, status: undefined });
     data.unshift({ name: 'Tasha', age: 21, status: Status.ACTIVE });
 
     return {

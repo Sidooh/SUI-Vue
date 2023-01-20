@@ -15,7 +15,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 const props = defineProps<{ status: Status }>(),
-    status = props.status?.toUpperCase() as Status
+    status = (props.status?.toUpperCase() || 'UNDEFINED') as Status
 
 const statusProps = (status: Status) => {
     let color: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger' | 'light' | 'dark' = 'dark', icon;
