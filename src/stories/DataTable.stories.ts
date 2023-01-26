@@ -32,7 +32,7 @@ export const DataTable: StoryFn<typeof DataTableComponent> = () => {
                         {accessorKey:'name'},
                         {accessorKey:'age'},
                         {accessorKey:'status',cell: info => h(StatusBadge, { status: info.getValue() ?? '' })}
-                    ]"/>
+                    ]" :on-create-row="()=>{}"/>
             </div>
             </div>
         `,

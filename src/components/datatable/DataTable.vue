@@ -8,7 +8,7 @@
         <div class="col-auto">
             <div class="d-flex align-items-center">
                 <font-awesome-icon v-if="onCreateRow" :icon="faPlusCircle" @click="onCreateRow"
-                                   class="fs-4 rounded-circle shadow-sm cursor-pointer text-primary me-2"/>
+                                   class="fs-2 rounded-circle shadow-sm cursor-pointer text-primary me-2"/>
                 <Tooltip :title="`${filtering ? 'Disable':'Enable'} Column Filtering`" placement="left">
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" :checked="filtering"
