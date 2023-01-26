@@ -1,13 +1,13 @@
 <template>
     <div v-if="typeof firstValue === 'number'">
         <div class="d-flex">
-            <DebouncedInput type="number" class="w-25 border rounded me-1"
+            <DebouncedInput type="number" class="border rounded me-1"
                             :min="Number(column.getFacetedMinMaxValues()?.[0] ?? '')"
                             :max="Number(column.getFacetedMinMaxValues()?.[1] ?? '')"
                             :on-change="value => column.setFilterValue((old: [number, number]) => [value, old?.[1]])"
                             :query="String(columnFilterValue?.[0] ?? '')"
                             :placeholder="`Min ${column.getFacetedMinMaxValues()?.[0] ? `(${column.getFacetedMinMaxValues()?.[0]})` : ''}`"/>
-            <DebouncedInput type="number" class="w-25 border rounded"
+            <DebouncedInput type="number" class="border rounded"
                             :min="Number(column.getFacetedMinMaxValues()?.[0] ?? '')"
                             :max="Number(column.getFacetedMinMaxValues()?.[1] ?? '')"
                             :on-change="value => column.setFilterValue((old: [number, number]) => [old?.[0], value])"
