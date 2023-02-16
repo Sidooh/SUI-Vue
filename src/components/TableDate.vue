@@ -10,7 +10,7 @@
 import moment from "moment";
 import { ref } from "vue";
 
-const props = defineProps<{ date?: string, dateOverTime?: boolean }>()
+const props = defineProps<{ date?: string | Date, dateOverTime?: boolean }>()
 
 const REFERENCE = moment();
 const TODAY = REFERENCE.clone().startOf("day");
