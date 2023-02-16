@@ -67,6 +67,3 @@ export class ConsoleLogger implements Logger {
         this.log = console.log.bind(console);
     }
 }
-
-export const LOG_LEVEL: LogLevel = import.meta.env.VITE_LOG_LEVEL || (import.meta.env.MODE === 'production' ? 'warn' : 'debug');
-export const logger = new ConsoleLogger({ level: LOG_LEVEL });

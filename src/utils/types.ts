@@ -48,4 +48,5 @@ export type Invite = Model & {
     inviter_id: number
     account_id: number
     user: User
+    inviter?: Account
 }
