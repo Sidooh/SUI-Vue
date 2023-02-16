@@ -1,5 +1,7 @@
 import { Telco } from "./enums";
 import Swal, { SweetAlertOptions } from 'sweetalert2';
+import moment from "moment";
+import { Account, Invite } from "./types";
 
 export const JWT = {
     decode: (token: string) => {
@@ -70,3 +72,26 @@ export const currencyFormat = (number?: number, currency = 'KES', decimals = 0) 
     currency,
     maximumFractionDigits: decimals
 })).format(number);
+
+export const accountAccessor = (a: Account | Invite) => {
+    return `${a.phone}${a.user?.name ? ` - ${a.user?.name}` : ''}`
+}
+
+const REFERENCE = moment();
+const TODAY = REFERENCE.clone().startOf("day");
+const YESTERDAY = REFERENCE.clone().subtract(1, "days").startOf("day");
+export const getRelativeDateAndTime = (date: string) => {
+    let relativeDate: string, time = moment(date).format("hh:mm A");
+
+    if (moment(date).isSame(TODAY, "d")) {
+        relativeDate = "Today";
+    } else if (moment(date).isSame(YESTERDAY, "d")) {
+        relativeDate = "Yesterday";
+    } else {
+        relativeDate = moment(date).format("D.M.y");
+    }
+
+    const toString = () => `${relativeDate} @${time}`
+
+    return { date: relativeDate, time, toString }
+}
