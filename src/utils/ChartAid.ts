@@ -7,7 +7,7 @@ export class ChartAid {
     constructor(private period: Period, private frequency: Frequency = Frequency.DAILY) {
     }
 
-    dataset = (raw: RawAnalytics[], freqCount?: number) => {
+    getDataset = (raw: RawAnalytics[], freqCount?: number) => {
         let labels: string[] = [], dataset: number[] = []
 
         if (!freqCount) {
