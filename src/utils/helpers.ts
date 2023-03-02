@@ -1,4 +1,4 @@
-import { Telco } from "./enums";
+import { Frequency, Period, Telco } from "./enums";
 import Swal, { SweetAlertOptions } from 'sweetalert2';
 import moment from "moment";
 import { Account, Invite } from "./types";
@@ -138,3 +138,12 @@ export const Str = {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
 };
+
+export const chartSelectOptions = {
+    [Period.TODAY]: [Frequency.HOURLY],
+    [Period.LAST_SEVEN_DAYS]: [Frequency.DAILY],
+    [Period.LAST_THIRTY_DAYS]: [Frequency.DAILY, Frequency.WEEKLY],
+    [Period.LAST_THREE_MONTHS]: [Frequency.WEEKLY, Frequency.MONTHLY],
+    [Period.LAST_SIX_MONTHS]: [Frequency.MONTHLY],
+    [Period.YTD]: [Frequency.MONTHLY, Frequency.QUARTERLY]
+}
