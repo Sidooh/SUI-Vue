@@ -1,4 +1,4 @@
-export * from './moment';
+import './moment';
 export * from './enums';
 export * from './helpers';
 export * from './logger';
