@@ -18,6 +18,7 @@ export type Model = {
     created_at?: string
     updated_at?: string
 }
+
 export type User = Model & {
     id: number
     name: string
@@ -27,7 +28,6 @@ export type User = Model & {
     status: Status
     password: string
 }
-
 
 export type Account = Model & {
     id: number
@@ -49,4 +49,9 @@ export type Invite = Model & {
     account_id: number
     user: User
     inviter?: Omit<Account, 'inviter'>,
+}
+
+export type RawAnalytics = {
+    date: number
+    count: number
 }
