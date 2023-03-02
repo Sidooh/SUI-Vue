@@ -94,6 +94,9 @@ export class ChartAid {
     private getLabel(date: Moment) {
         switch (this.frequency) {
             case Frequency.YEARLY:
+                if (date.isCurrentYear()) return 'This Year'
+                else if (date.isLastYear()) return 'Last Year'
+
                 return date.year().toString()
             case Frequency.QUARTERLY:
                 const endDate = date.format('MMM'),
@@ -101,17 +104,17 @@ export class ChartAid {
 
                 return `${startDate} : ${endDate}`
             case Frequency.MONTHLY:
+                if (date.isCurrentMonth()) return 'This Month'
+                else if (date.isLastMonth()) return 'Last Month'
+
                 return date.format('MMM')
             case Frequency.WEEKLY:
                 const diff = moment().diff(date, 'w')
 
                 return diff < 1 ? 'This Week' : `${diff} ${pluralize('week', diff)} ago`
             case Frequency.DAILY:
-                if(date.isToday()) {
-                    return 'Today'
-                } else if(date.isYesterday()) {
-                    return 'Yesterday'
-                }
+                if (date.isToday()) return 'Today'
+                else if (date.isYesterday()) return 'Yesterday'
 
                 return date.format(this.period === Period.LAST_SEVEN_DAYS ? 'ddd' : 'Do')
             default:
