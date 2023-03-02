@@ -1,6 +1,6 @@
 {
   "name": "@nabcellent/sui-vue",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "packageManager": "yarn@3.4.1",
   "description": "Sidooh's Vue component library",
   "license": "MIT",
