@@ -107,6 +107,12 @@ export class ChartAid {
 
                 return diff < 1 ? 'This Week' : `${diff} ${pluralize('week', diff)} ago`
             case Frequency.DAILY:
+                if(date.isToday()) {
+                    return 'Today'
+                } else if(date.isYesterday()) {
+                    return 'Yesterday'
+                }
+
                 return date.format(this.period === Period.LAST_SEVEN_DAYS ? 'ddd' : 'Do')
             default:
                 return date.format('HH00')
