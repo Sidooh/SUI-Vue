@@ -67,5 +67,9 @@
   },
   "peerDependencies": {
     "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "@types/pluralize": "^0.0.29",
+    "pluralize": "^8.0.0"
   }
 }
