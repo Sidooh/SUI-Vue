@@ -326,7 +326,6 @@ table td.actions .btn {
     width: 1.28571428em;
     border: 0.1428571429em solid white;
     border-right-color: transparent;
-    margin-right: 0.75em;
 }
 
 @keyframes rotate {
