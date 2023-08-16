@@ -91,11 +91,11 @@
                    min="1" :max="table.getPageCount()" class="form-control form-control-sm w-auto border-3 ms-2"/>
         </div>
         <div class="d-flex">
-            <button class="btn btn-sm btn-primary" :disabled="!table.getCanPreviousPage()"
+            <button class="btn btn-sm btn-primary d-flex align-items-center" :disabled="!table.getCanPreviousPage()"
                     @click="table.setPageIndex(0)">
                 <font-awesome-icon :icon="faAnglesLeft" font-size="15"/>
             </button>
-            <button class="btn btn-sm btn-primary ms-1" :disabled="!table.getCanPreviousPage()"
+            <button class="btn btn-sm btn-primary d-flex align-items-center ms-1" :disabled="!table.getCanPreviousPage()"
                     @click="table.previousPage()">
                 <font-awesome-icon :icon="faAngleLeft" font-size="15"/>
             </button>
@@ -106,11 +106,11 @@
                     Show {{ pageSize }}
                 </option>
             </select>
-            <button class="btn btn-sm btn-primary" :disabled="!table.getCanNextPage()"
+            <button class="btn btn-sm btn-primary d-flex align-items-center" :disabled="!table.getCanNextPage()"
                     @click="table.nextPage()">
                 <font-awesome-icon :icon="faAngleRight" font-size="15"/>
             </button>
-            <button class="btn btn-sm btn-primary ms-1" :disabled="!table.getCanNextPage()"
+            <button class="btn btn-sm btn-primary d-flex align-items-center ms-1" :disabled="!table.getCanNextPage()"
                     @click="table.setPageIndex(table.getPageCount() - 1)">
                 <font-awesome-icon :icon="faAnglesRight" font-size="15"/>
             </button>
