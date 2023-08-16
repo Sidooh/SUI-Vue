@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: yarn
+      - run: yarn i
 #      - run: npm test
 
   publish-gpr:
@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
-      - run: yarn
+      - run: yarn i
       - run: npm run build
       - run: npm publish
         env:
