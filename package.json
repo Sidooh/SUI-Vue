@@ -22,7 +22,7 @@
       "require": "./dist/sui-vue.umd.js"
     },
     "./dist/style.css": "./dist/style.css",
-    "./dist/types": "./dist/types/index.d.ts"
+    "./dist/types/index.d.ts": "./dist/types/index.d.ts"
   },
   "scripts": {
     "dev": "vite",
