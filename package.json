@@ -18,12 +18,13 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/sui-vue.es.js",
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/sui-vue.es.js"
+      },
       "require": "./dist/sui-vue.umd.js"
     },
-    "./dist/style.css": "./dist/style.css",
-    "./dist/types/index.d.ts": "./dist/types/index.d.ts"
+    "./dist/style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
