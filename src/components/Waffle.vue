@@ -25,7 +25,8 @@
                                    rel="noopener noreferrer" class="d-block px-2 py-3 text-center text-decoration-none"
                                    :class="!link.enabled ? 'bg-100 ' : 'hover-bg-200 cursor-pointer rounded-3'">
                                     <div v-if="link.avatarText" class="avatar avatar-2xl ">
-                                        <div class="avatar-name rounded-circle fs-2 bg-soft-primary text-primary">
+                                        <div
+                                            :class="`avatar-name rounded-circle fs-2 ${link.contentClass}`">
                                             <span>{{ link.avatarText }}</span>
                                         </div>
                                     </div>
@@ -57,6 +58,7 @@ type WaffleLink = {
     hr?: boolean
     contentClass?: string
     enabled?: boolean
+    color?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger' | 'light' | 'dark'
 }
 defineProps<{ links: WaffleLink[] }>()
 </script>

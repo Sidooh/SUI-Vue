@@ -17,42 +17,43 @@ export const Waffle: StoryFn<typeof WaffleComponent> = () => ({
         avatarText: 'E',
         title: 'Enterprise',
         link: '/',
-        contentClass: 'bg-soft-primary text-primary',
-        enabled: true
+        contentClass: 'bg-primary-subtle text-primary',
+        enabled: true,
+        color:'danger'
     },
     {
         avatarText: 'N',
         title: 'Notify',
         link: '/',
-        contentClass: 'bg-soft-primary text-primary',
+        contentClass: 'bg-danger-subtle text-primary',
         enabled: true
     },
     {
         avatarText: 'p',
         title: 'Payments',
         link: '/',
-        contentClass: 'bg-soft-primary text-primary',
+        contentClass: 'bg-secondary-subtle text-primary',
         enabled: true
     },
     {
         avatarText: 'P',
         title: 'Products',
         link: '/',
-        contentClass: 'bg-soft-primary text-primary',
+        contentClass: 'bg-warning-subtle text-primary',
         enabled: true
     },
     {
         avatarText: 'S',
         title: 'Savings',
         link: '/',
-        contentClass: 'bg-soft-primary text-primary',
+        contentClass: 'bg-success-subtle text-primary',
         enabled: true
     },
     {
         avatarText: 'U',
         title: 'USSD',
         link: '/',
-        contentClass: 'bg-soft-primary text-primary',
+        contentClass: 'bg-info-subtle text-primary',
         enabled: true
     },
 ]"/>

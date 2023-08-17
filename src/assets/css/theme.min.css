@@ -69,9 +69,9 @@
     --falcon-white-rgb: 255, 255, 255;
     --falcon-black-rgb: 0, 0, 0;
     --falcon-font-sans-serif: Avenir, sans-serif;
-    --falcon-font-monospace: "Proxima Nova Rg Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --falcon-font-monospace: "Proxima Nova Rg Regular", monospace;
     --falcon-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-    --falcon-body-font-family: var(--sidooh-font-sans-serif);
+    --falcon-body-font-family: Avenir, sans-serif;
     --falcon-body-font-size: 1rem;
     --falcon-body-font-weight: 400;
     --falcon-body-line-height: 1.5;
@@ -246,9 +246,9 @@
     --falcon-github-rgb: 51, 51, 51;
     --falcon-dark-rgb: 11, 23, 39;
     --falcon-light-rgb: 249, 250, 253;
-    --falcon-font-sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --falcon-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --falcon-font-base: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --falcon-font-sans-serif: Avenir, sans-serif;
+    --falcon-font-monospace: "Proxima Nova Rg Regular", monospace;
+    --falcon-font-base: Avenir, sans-serif;
     --falcon-global-border-style: solid;
     --falcon-border-color: #d8e2ef;
     --falcon-btn-disabled-border-color: transparent;
@@ -8407,7 +8407,7 @@ textarea.form-control-lg {
     z-index: var(--falcon-tooltip-zindex);
     display: block;
     margin: var(--falcon-tooltip-margin);
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Avenir, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -8520,7 +8520,7 @@ textarea.form-control-lg {
     z-index: var(--falcon-popover-zindex);
     display: block;
     max-width: var(--falcon-popover-max-width);
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Avenir, sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -25772,7 +25772,7 @@ code.language-html:first-child {
 
 code[class*=language-], pre[class*=language-] {
     color: #d8e2ef;
-    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+    font-family: "Proxima Nova Rg Regular", monospace
 }
 
 pre[class*=language-] {
@@ -31463,7 +31463,7 @@ html[dir=rtl] .img-dropdown {
     display: -ms-flexbox;
     display: flex;
     font-size: .8333333333rem;
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Avenir, sans-serif;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
