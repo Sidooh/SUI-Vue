@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -8,8 +9,8 @@
     "jsx": "preserve",
     "sourceMap": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
     "declarationDir": "./dist/types",
+    "emitDeclarationOnly": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -21,18 +22,16 @@
     "skipLibCheck": true,
     "types": [
       "vite/client"
-    ]
-  },
-  "paths": {
-    "@/*": [
-      "src/*"
-    ]
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
   "include": [
-    "vite.config.*",
     "src/**/*.ts",
     "src/**/*.d.ts",
-    "src/**/*.tsx",
     "src/**/*.vue"
   ],
   "references": [
