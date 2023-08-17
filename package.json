@@ -18,6 +18,7 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/sui-vue.es.js",
       "require": "./dist/sui-vue.umd.js"
     },
