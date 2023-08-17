@@ -18,10 +18,7 @@
   },
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/types/index.d.ts",
-        "default": "./dist/sui-vue.es.js"
-      },
+      "import": "./dist/sui-vue.es.js",
       "require": "./dist/sui-vue.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
@@ -71,6 +68,7 @@
     "sweetalert2": "^11.7.22",
     "typescript": "^5.1.6",
     "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.5.2",
     "vue": "^3.3.4",
     "vue-tsc": "^1.8.8"
   },
