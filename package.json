@@ -5,9 +5,9 @@
   "description": "Sidooh's Vue component library",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/github-packages-ui-library.umd.js",
+  "main": "dist/github-packages-ui-library.umd.js",
   "module": "dist/sui-vue.es.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -77,8 +77,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sidooh/sui-vue.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@nabcellent"
   }
 }
