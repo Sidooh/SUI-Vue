@@ -1,6 +1,6 @@
 {
   "name": "@nabcellent/sui-vue",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "packageManager": "yarn@3.4.1",
   "description": "Sidooh's Vue component library",
   "license": "MIT",
@@ -23,7 +23,6 @@
     },
     "./dist/style.css": "./dist/style.css",
     "./dist/types": "./dist/types/index.d.ts"
-
   },
   "scripts": {
     "dev": "vite",
