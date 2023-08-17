@@ -5,7 +5,7 @@
   "description": "Sidooh's Vue component library",
   "license": "MIT",
   "type": "module",
-  "main": "dist/github-packages-ui-library.umd.js",
+  "main": "dist/sui-vue.umd.js",
   "module": "dist/sui-vue.es.js",
   "types": "dist/types/index.d.ts",
   "files": [
@@ -19,9 +19,9 @@
   "exports": {
     ".": {
       "import": "./dist/sui-vue.es.js",
-      "require": "./dist/github-packages-ui-library.umd.js"
+      "require": "./dist/sui-vue.umd.js"
     },
-    "./dist/style.min.css": "./dist/style.min.css"
+    "./dist/style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
