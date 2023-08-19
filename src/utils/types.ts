@@ -45,8 +45,10 @@ export type Invite = Model & {
     id: number
     phone: string
     status: Status
+    type: string
     inviter_id: number
     account_id: number
+
     user: User
     inviter?: Omit<Account, 'inviter'>,
 }

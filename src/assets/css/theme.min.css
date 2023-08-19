@@ -247,7 +247,7 @@
     --falcon-dark-rgb: 11, 23, 39;
     --falcon-light-rgb: 249, 250, 253;
     --falcon-font-sans-serif: Avenir, sans-serif;
-    --falcon-font-monospace: "Proxima Nova Rg Regular", monospace;
+    --falcon-font-monospace: "Proxima Nova Rg Regular", monospace1;
     --falcon-font-base: Avenir, sans-serif;
     --falcon-global-border-style: solid;
     --falcon-border-color: #d8e2ef;
@@ -25772,7 +25772,7 @@ code.language-html:first-child {
 
 code[class*=language-], pre[class*=language-] {
     color: #d8e2ef;
-    font-family: "Proxima Nova Rg Regular", monospace
+    font-family: "Proxima Nova Rg Regular", monospace1
 }
 
 pre[class*=language-] {
