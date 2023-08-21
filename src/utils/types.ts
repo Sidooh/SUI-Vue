@@ -1,5 +1,5 @@
 import { IconDefinition } from "@fortawesome/free-regular-svg-icons";
-import { Status } from "./enums";
+import { Initiator, Status, TransactionType } from "./enums";
 
 type RouteChildType = {
     name: string
@@ -14,13 +14,12 @@ export type RouteType = {
 }
 
 export type Model = {
-    id?: number
+    id: number
     created_at?: string
     updated_at?: string
 }
 
 export type User = Model & {
-    id: number
     name: string
     email: string
     username: string
@@ -30,7 +29,6 @@ export type User = Model & {
 }
 
 export type Account = Model & {
-    id: number
     phone: string
     active: boolean
     inviter_id: number
@@ -42,7 +40,6 @@ export type Account = Model & {
 }
 
 export type Invite = Model & {
-    id: number
     phone: string
     status: Status
     type: string
@@ -51,6 +48,28 @@ export type Invite = Model & {
 
     user: User
     inviter?: Omit<Account, 'inviter'>,
+}
+
+export type Transaction = Model & {
+    account_id: number
+    product_id: number
+
+    initiator: Initiator
+    type: TransactionType
+    amount: number
+    charge: number
+    status: Status
+    description: string
+    destination: string
+}
+
+export type Subscription = Model & {
+    account_id: number
+    subscription_type_id: number
+
+    start_date: string
+    end_date: string
+    status: Status
 }
 
 export type RawAnalytics = {

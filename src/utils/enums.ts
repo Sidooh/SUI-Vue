@@ -36,3 +36,19 @@ export enum Frequency {
     QUARTERLY = 'QUARTERLY',
     YEARLY = 'YEARLY'
 }
+
+export enum Initiator {
+    AGENT = 'AGENT',
+    CONSUMER = 'CONSUMER',
+    ENTERPRISE = 'ENTERPRISE'
+}
+
+export enum TransactionType {
+    PAYMENT = 'PAYMENT',
+    WITHDRAWAL = 'WITHDRAWAL'
+}
+
+export enum InviteType {
+    INVITED = 'INVITED',
+    INVITE_CODE = 'INVITE_CODE'
+}
